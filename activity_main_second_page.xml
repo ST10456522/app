@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Pet image -->
+
+    <!-- Buttons -->
+
+    <ImageView
+        android:id="@+id/pet_image"
+        android:layout_width="228dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="16dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/img_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_feed"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/feed"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pet_image" />
+
+    <!-- Status values -->
+
+    <Button
+        android:id="@+id/btn_clean"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/clean"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btn_feed"
+        app:layout_constraintTop_toBottomOf="@+id/pet_image"
+        tools:ignore="TextSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/btn_happy"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="Happy"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btn_clean"
+        app:layout_constraintTop_toBottomOf="@+id/pet_image"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText" />
+
+    <TextView android:id="@+id/txt_hunger" android:layout_width="124dp" android:layout_height="50dp" android:layout_marginStart="16dp" android:layout_marginTop="48dp" android:text="@string/hungry" android:textSize="30sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/btn_feed" tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/txt_clean"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Clean"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hunger"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <!-- Edit texts for status values -->
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/happy"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_clean"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/txt_happy"
+        android:layout_width="159dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/txt_clean_value"
+        tools:ignore="Autofill,LabelFor,TextFields,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/txt_hungry_value"
+        android:layout_width="159dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_hunger"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean"
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields" />
+
+    <EditText
+        android:id="@+id/txt_clean_value"
+        android:layout_width="159dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_clean"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hungry_value"
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields" />
+</androidx.constraintlayout.widget.ConstraintLayout>
